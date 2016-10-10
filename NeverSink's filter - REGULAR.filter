@@ -2963,7 +2963,6 @@ SetFontSize 32
 Show #$recipe, quality, lvl, nonmf
 	Class "Body Armour" "Helmets" "Gloves" "Boots" "Two Hand" "Bows" "One Hand" "Wand" "Sceptre" "Staves" "Claws"
 	Rarity <= Magic
-	ItemLevel <= 60
 	Quality = 20
 	SetBorderColor 0 0 0
 	SetBackgroundColor 75 75 75
@@ -4064,6 +4063,22 @@ SetFontSize 29
 # Section: OMEGA # ADDITIONAL RULES - ADD YOUR OWN RULES THAT WON'T OVERRIDE THE OTHER RULES
 #---------------------------------------------------------------------------------------------------------------
 #This is the spot to add your own rules, that would not invalidate any rules above, but may highlight otherwise hidden things
+
+Show   #Whetstone
+    Class One Two Bow Wand Dagger Sceptre Stave Claw
+    Quality >= 10
+	SetBackgroundColor 75 75 75
+
+Show   #Perennial Crafting Jewelry
+    Rarity Normal
+	Class Rings Amulet
+    BaseType "Unset" "Onyx" "Two-Stone" "Moonstone" "Prismatic" "Coral Ring"
+	SetBackgroundColor 75 75 75
+	
+Show   #Iron Rings - lots of recipes use these
+	Class Rings
+    BaseType "Iron"
+	SetBackgroundColor 75 75 75
 
 #------------------------------------------------------------------------
 # Section: XXXX # HIDE THE REST THEN FAILSAFE DISPLAY
