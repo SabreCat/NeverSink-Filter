@@ -986,7 +986,7 @@ Show #$topcrafting, ilvl84 %D2
 
 Show #$topcrafting, ilvl84
 	Class Rings Amulet Belts
-	BaseType "Onyx" "Ruby" "Sapphire" "Topaz" "Two-Stone" "Diamond" "Prismatic" "Unset" "Gold" "Citrine" "Turquoise" "Agate" "Coral Ring" "Moonstone" "Leather" "Heavy Belt" "Amber" "Jade" "Lapis" "Rustic Sash"
+	BaseType "Onyx" "Ruby" "Sapphire" "Topaz" "Two-Stone" "Diamond" "Prismatic" "Unset" "Gold" "Citrine" "Turquoise" "Agate" "Coral Ring" "Moonstone" "Leather" "Heavy Belt" "Amber" "Jade" "Lapis" "Rustic Sash" "Chain Belt"
 	Rarity Rare
 	ItemLevel >= 84
 	SetTextColor 255 190 0
@@ -2638,14 +2638,14 @@ Show #$crafting, egc %D2
 
 Show #$crafting, egc %D2
 	Class Rings Amulet Belts
-	BaseType "Ruby" "Sapphire" "Topaz" "Unset" "Gold" "Citrine" "Turquoise" "Agate" "Coral Ring" "Moonstone" "Leather" "Heavy Belt" "Amber" "Jade" "Lapis" "Rustic Sash"
+	BaseType "Ruby" "Sapphire" "Topaz" "Unset" "Gold" "Citrine" "Turquoise" "Agate" "Coral Ring" "Moonstone" "Leather" "Heavy Belt" "Amber" "Jade" "Lapis" "Rustic Sash" "Chain Belt"
 	ItemLevel >= 84
 	SetBorderColor 255 255 0 190
 	SetFontSize 38
 
 Show #$crafting, egc %D3
 	Class Rings Amulet Belts
-	BaseType "Ruby" "Sapphire" "Topaz" "Unset" "Gold" "Citrine" "Turquoise" "Agate" "Coral Ring" "Moonstone" "Leather" "Heavy Belt" "Amber" "Jade" "Lapis" "Rustic Sash"
+	BaseType "Ruby" "Sapphire" "Topaz" "Unset" "Gold" "Citrine" "Turquoise" "Agate" "Coral Ring" "Moonstone" "Leather" "Heavy Belt" "Amber" "Jade" "Lapis" "Rustic Sash" "Chain Belt"
 	ItemLevel >= 84
 	SetBorderColor 255 255 0 190
 	SetFontSize 36
@@ -2763,13 +2763,13 @@ Show #$rgb %H2
 
 ### PRIORITY CHANCE ITEMS ### THESE ITEMS PLAY A SOUND WHEN FOUND
 ### You can add your own items here. The items in this section have a dropsound
-Show #$chancing, top %D2
-	BaseType "Sorcerer Boots"
-	Rarity Normal
-	SetTextColor 255 255 255 255
-	SetBorderColor 0 210 0 210
-	SetFontSize 38
-	PlayAlertSound 7 300
+#Show #$chancing, top %D2
+#	BaseType "Sorcerer Boots"
+#	Rarity Normal
+#	SetTextColor 255 255 255 255
+#	SetBorderColor 0 210 0 210
+#	SetFontSize 38
+#	PlayAlertSound 7 300
 
 # Occultists' Vestment - Shavronne's Armor
 # Imperial Bow - Windripper (uncommon, rare)/Lionseye (common, cheap)
@@ -2780,7 +2780,7 @@ Show #$chancing, top %D2
 
 ### REGULAR CHANCE BASES ###	
 Show #$chancing %D1
-	BaseType "Occultist's Vestment" "Assassin's Garb" "Prophecy Wand" "Deicide Mask"
+	BaseType "Occultist's Vestment" "Assassin's Garb" "Prophecy Wand" "Deicide Mask" "Sorcerer Boots" "Desert Brigandine" "Judgement Staff"
 	Rarity Normal
 	SetTextColor 255 255 255 255
 	SetBorderColor 0 150 0 150
@@ -2814,7 +2814,7 @@ Show #$crafting, trinkets, regal %D2
 # Endgame: Show normal ilvl 75+ rings/amulets
 Show #$crafting, trinkets, regal %D1
 	Class Rings Amulet Belts
-	BaseType "Onyx" "Ruby" "Sapphire" "Topaz" "Two-Stone" "Diamond" "Prismatic" "Unset" "Gold" "Citrine" "Turquoise" "Agate" "Coral Ring" "Moonstone" "Leather" "Heavy" "Amber" "Jade" "Lapis" "Rustic" "Iron Ring"
+	BaseType "Onyx" "Ruby" "Sapphire" "Topaz" "Two-Stone" "Diamond" "Prismatic" "Unset" "Gold" "Citrine" "Turquoise" "Agate" "Coral Ring" "Moonstone" "Leather" "Heavy" "Amber" "Jade" "Lapis" "Rustic" "Iron Ring" "Chain Belt"
 	Rarity Normal
 	ItemLevel >= 75
 	SetBorderColor 255 190 0 150
@@ -2823,7 +2823,7 @@ Show #$crafting, trinkets, regal %D1
 # Endgame: Show normal ilvl 60+ rings/amulets
 Show #$crafting, trinkets, chaos %D1
 	Class Rings Amulet Belts
-	BaseType "Onyx" "Ruby" "Sapphire" "Topaz" "Two-Stone" "Diamond" "Prismatic" "Unset" "Gold" "Citrine" "Turquoise" "Agate" "Coral Ring" "Moonstone" "Leather" "Heavy" "Amber" "Jade" "Lapis" "Rustic" "Iron Ring"
+	BaseType "Onyx" "Ruby" "Sapphire" "Topaz" "Two-Stone" "Diamond" "Prismatic" "Unset" "Gold" "Citrine" "Turquoise" "Agate" "Coral Ring" "Moonstone" "Leather" "Heavy" "Amber" "Jade" "Lapis" "Rustic" "Iron Ring" "Chain Belt"
 	Rarity Normal
 	ItemLevel >= 62
 	ItemLevel < 75
@@ -4066,18 +4066,14 @@ SetFontSize 29
 
 Show   #Whetstone
 	Class One Two Bow Wand Dagger Sceptre Stave Claw
-	Quality >= 10
-	SetBackgroundColor 75 75 75
-
-Show   #Perennial Crafting Jewelry
-	Rarity Normal
-	Class Rings Amulet
-	BaseType "Unset" "Onyx" "Two-Stone" "Moonstone" "Prismatic" "Coral Ring"
+	Quality >= 15
+	Height < 3
 	SetBackgroundColor 75 75 75
 	
-Show   #Iron Rings - lots of recipes use these
-	Class Rings
-	BaseType "Iron"
+Show   #Whetstone
+	Class One Two Bow Wand Dagger Sceptre Stave Claw
+	Quality >= 15
+	Width 1
 	SetBackgroundColor 75 75 75
 
 #------------------------------------------------------------------------
